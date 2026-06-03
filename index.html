@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundo Perruno</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Aplicacion web interactiva</p>
+      <h1>Mundo Perruno</h1>
+      <p>Galeria, sonido y video para disfrutar una experiencia sencilla sobre perros.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro" aria-labelledby="intro-title">
+      <div>
+        <h2 id="intro-title">Amigos de cuatro patas</h2>
+        <p>Los perros son companeros leales, juguetones y muy expresivos. En esta pagina puedes ver imagenes, escuchar un ladrido y controlar un video corto de perro.</p>
+      </div>
+      <button class="bark-button" type="button" id="barkButton">Reproducir ladrido</button>
+      <audio id="dogAudio" preload="auto">
+        <source src="assets/audio/perro-ladrando.mp3" type="audio/mpeg" />
+        Tu navegador no soporta audio HTML5.
+      </audio>
+    </section>
+
+    <section class="section" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Galeria de 6 imagenes</h2>
+      <div class="gallery">
+        <figure><img loading="lazy" src="assets/images/perro-1.jpg" alt="Perro golden retriever sentado en el pasto" /><figcaption>Golden feliz</figcaption></figure>
+        <figure><img loading="lazy" src="assets/images/perro-2.jpg" alt="Perro mirando hacia arriba al aire libre" /><figcaption>Mirada curiosa</figcaption></figure>
+        <figure><img loading="lazy" src="assets/images/perro-3.jpg" alt="Dos perros corriendo juntos" /><figcaption>Mejores amigos</figcaption></figure>
+        <figure><img loading="lazy" src="assets/images/perro-4.jpg" alt="Perro con lengua afuera mirando a la camara" /><figcaption>Sonrisa perruna</figcaption></figure>
+        <figure><img loading="lazy" src="assets/images/perro-5.jpg" alt="Perro pequeno envuelto en una manta" /><figcaption>Descanso</figcaption></figure>
+        <figure><img loading="lazy" src="assets/images/perro-6.jpg" alt="Cachorro acostado en una superficie clara" /><figcaption>Cachorro tierno</figcaption></figure>
+      </div>
+      <div class="gallery-actions" aria-label="Controles de la galeria">
+        <button type="button" id="prevImageBtn">Imagen anterior</button>
+        <p id="imageStatus">Imagen 1 de 6</p>
+        <button type="button" id="nextImageBtn">Imagen siguiente</button>
+      </div>
+    </section>
+
+    <section class="section video-section" aria-labelledby="video-title">
+      <h2 id="video-title">Video corto de perro</h2>
+      <p class="video-note">Este video se reproduce desde la carpeta del proyecto para que otras personas puedan verlo al abrir la pagina.</p>
+      <div class="video-frame">
+        <video id="dogVideo" preload="metadata">
+          <source src="assets/video/perro-video.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+      <div class="controls" aria-label="Controles del video">
+        <button type="button" id="rewindBtn">Retroceder 2s</button>
+        <button type="button" id="pauseBtn">Pausar</button>
+        <button type="button" id="forwardBtn">Adelantar 2s</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Pagina creada para una asignacion de aplicacion web interactiva.</p>
+    <p class="credits">Imagenes, audio y video: archivos locales.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
