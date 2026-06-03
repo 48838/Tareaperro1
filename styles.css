@@ -1,0 +1,34 @@
+:root{--ink:#24302f;--muted:#5d6b68;--paper:#fffdf8;--leaf:#2f6d59;--sun:#e6a84f;--rust:#a94f32;--line:rgba(36,48,47,.14);--shadow:0 18px 40px rgba(37,42,35,.16)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
+.hero{min-height:58vh;display:flex;align-items:end;padding:44px min(6vw,72px);background:linear-gradient(90deg,rgba(20,28,25,.72),rgba(20,28,25,.18)),url("assets/images/hero-perro.jpg") center/cover;color:#fff}
+.hero__content{max-width:760px}
+.eyebrow{margin:0 0 12px;text-transform:uppercase;font-weight:700;letter-spacing:0;color:#ffe2a6}
+h1,h2,p{margin-top:0}
+h1{margin-bottom:12px;font-size:clamp(2.8rem,7vw,5.8rem);line-height:.95;letter-spacing:0}
+h2{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.1;margin-bottom:14px}
+p{line-height:1.65}
+main{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.section{padding:54px 0;border-bottom:1px solid var(--line)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center}
+.intro p,.video-note{color:var(--muted);max-width:720px}
+button{min-height:46px;border:0;border-radius:8px;padding:0 18px;background:var(--leaf);color:#fff;font-weight:700;cursor:pointer;box-shadow:0 10px 22px rgba(47,109,89,.22);transition:transform .16s ease,background .16s ease}
+button:hover{transform:translateY(-1px);background:#255847}
+.bark-button{background:var(--rust);box-shadow:0 10px 22px rgba(169,79,50,.22);white-space:nowrap}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 10px 24px rgba(42,36,26,.08);transition:transform .18s ease,border-color .18s ease}
+figure:hover,figure.is-active{transform:translateY(-3px);border-color:var(--rust)}
+figure img{width:100%;aspect-ratio:4/3;display:block;object-fit:cover}
+figcaption{padding:12px 14px;font-weight:700;color:var(--ink)}
+.gallery-actions{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+.gallery-actions p{margin:0;color:var(--muted);font-weight:700}
+.video-section{text-align:center}
+.video-note{margin-left:auto;margin-right:auto}
+.video-frame{width:min(860px,100%);aspect-ratio:16/9;margin:22px auto 16px;background:#141817;border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+#player,#player iframe,#dogVideo{width:100%;height:100%}
+#dogVideo{display:block;object-fit:contain;background:#141817}
+.controls{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:14px}
+.controls button:nth-child(2){background:var(--sun);color:#2c2111;box-shadow:0 10px 22px rgba(230,168,79,.24)}
+footer{padding:28px 16px 38px;text-align:center;color:var(--muted)}
+.credits{font-size:.92rem}
+@media(max-width:760px){.hero{min-height:52vh;padding:34px 20px}.intro{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.bark-button,.controls button{width:100%}}
